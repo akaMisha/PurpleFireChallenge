@@ -1,0 +1,153 @@
+.banner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 256px;
+  background-color: #f4f5f8;
+}
+.product-overview {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin: 24px;
+  .product-image-overview {
+    display: flex;
+    flex-direction: row;
+    .product-image-group {
+      display: flex;
+      flex-direction: column;
+      margin-right: 8px;
+
+      .product-image {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 152px;
+        height: 115px;
+        border: 2px solid #f0f0f0;
+        margin-bottom: 16px;
+
+        img {
+          width: 108px;
+          height: 80px;
+        }
+      }
+    }
+    .selected-image {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 528px;
+      height: 548px;
+      background-color: #f1f1f1;
+      img {
+        width: 468px;
+        height: 310px;
+      }
+    }
+  }
+  .product-detail {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    margin-left: 24px;
+    .product-bullet {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+    }
+    .size-grid {
+      margin: 8px;
+      .mat-grid-tile {
+        cursor: pointer;
+        border: 1px solid transparent;
+        transition: border-color 0.3s, color 0.3s;
+
+        &:hover {
+          border-color: #e73c17; // Change border color on hover
+          color: #e73c17; // Change text color on hover
+        }
+
+        &.selected {
+          border-color: #e73c17; // Change border color for selected item
+          color: #e73c17; // Change text color for selected item
+        }
+
+        &.hovered {
+          border-color: #ccc; // Change border color for hovered item
+          color: #ccc; // Change text color for hovered item
+        }
+      }
+    }
+    .order-summary {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+      .price-summary {
+        margin: 8px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        .price-text-group {
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          .price-text {
+            margin-top: 16px;
+            font-size: 32px;
+          }
+          .discounted-price-text {
+            padding-top: 12px;
+            margin-left: 16px;
+            font-size: 24px;
+            text-decoration: line-through; /* Apply strikethrough */
+            color: #d9d9d9;
+          }
+        }
+      }
+      .amount-group {
+        margin: 8px;
+        margin-top: 36px;
+        width: 202px;
+        height: 60px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-evenly;
+        border: 1px solid #f0f0f0;
+        span {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          font-size: 32px;
+          font-weight: 400;
+          line-height: 38.73px;
+          width: 74px;
+          height: 60px;
+          border: 1px solid #f0f0f0;
+        }
+      }
+    }
+    .order-button-group {
+      display: flex;
+      justify-content: space-between;
+      button {
+        margin: 8px;
+
+        width: 202px;
+        height: 60px;
+      }
+      .buy-btn {
+        border: none;
+        background-color: #e73c17;
+        color: #fff;
+      }
+      .cart-btn {
+        border: 1px solid transparent;
+        border-color: #e73c17;
+        color: #e73c17;
+      }
+    }
+  }
+}

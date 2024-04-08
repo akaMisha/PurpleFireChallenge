@@ -5,6 +5,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ToolbarComponent } from './toolbar/toolbar.component';
+import { ProductDetailComponent } from './product-detail/product-detail.component';
 
 import { MatInputModule } from '@angular/material/input';
 import { MatButtonModule } from '@angular/material/button';
@@ -13,9 +14,10 @@ import { MatSelectModule } from '@angular/material/select';
 import { MatIconModule } from '@angular/material/icon';
 import { MatDividerModule } from '@angular/material/divider';
 import { MatBadgeModule } from '@angular/material/badge';
+import { MatGridListModule } from '@angular/material/grid-list';
 
 @NgModule({
-  declarations: [AppComponent, ToolbarComponent],
+  declarations: [AppComponent, ToolbarComponent, ProductDetailComponent],
   imports: [
     MatIconModule,
     MatInputModule,
@@ -24,6 +26,7 @@ import { MatBadgeModule } from '@angular/material/badge';
     MatSelectModule,
     MatDividerModule,
     MatBadgeModule,
+    MatGridListModule,
     BrowserModule,
     BrowserAnimationsModule,
     AppRoutingModule,
