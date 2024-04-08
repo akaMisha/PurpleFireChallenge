@@ -1,0 +1,100 @@
+<div class="toolbar">
+  <div class="text-bar">
+    <p>Welcome to Needus & Get the best product</p>
+    <div class="language-group">
+      <span>ENG</span>
+      <mat-icon>expand_more</mat-icon>
+      <mat-divider [vertical]="true"></mat-divider>
+      <span>USD</span>
+      <mat-icon>expand_more</mat-icon>
+    </div>
+  </div>
+  <div class="main-bar">
+    <!-- Logo -->
+    <div class="logo">
+      <img src="../assets/Needus.png" />
+    </div>
+    <!-- Search Bar with Button -->
+    <div class="action-bar">
+      <div class="search-bar">
+        <div class="search-input">
+          <input matInput placeholder="Search" />
+          <div class="search-btn">
+            <button mat-icon-button aria-label="Search">
+              <mat-icon>search</mat-icon>
+            </button>
+          </div>
+        </div>
+      </div>
+      <!-- All Categories Dropdown -->
+      <div class="categories-dropdown">
+        <div class="dropdown-header" [matMenuTriggerFor]="categoriesMenu">
+          <span>All Categories</span>
+          <mat-icon>expand_more</mat-icon>
+        </div>
+
+        <div class="login-menu">
+          <p (click)="(null)">Login</p>
+          <mat-divider [vertical]="true" class="divider"></mat-divider>
+          <p>Signup</p>
+        </div>
+      </div>
+    </div>
+    <div class="cart-group">
+      <button mat-icon-button aria-label="Favorites">
+        <mat-icon>favorite</mat-icon>
+      </button>
+      <button mat-icon-button aria-label="Cart">
+        <!-- ANGULAR STRIKES AGAIN , ANOTHER COMPONENT NOT WORKING PROPERLY -->
+        <mat-icon matBadge="6" matBadgeColor="warn"> shopping_cart</mat-icon>
+      </button>
+    </div>
+  </div>
+  <div class="secondary-bar">
+    <!-- All Categories Dropdown -->
+    <div class="categories-dropdown">
+      <div class="dropdown-header">
+        <mat-icon>menu</mat-icon>
+        <span>All Categories</span>
+        <mat-icon>expand_more</mat-icon>
+      </div>
+      <div class="dropdown-menu">
+        <span>Category 1</span>
+        <span>Category 2</span>
+        <span>Category 3</span>
+        <span>Category 4</span>
+        <span>Category 5</span>
+      </div>
+    </div>
+
+    <!-- Navigation Links -->
+    <div class="navigation-links">
+      <span>Home</span>
+      <span>About</span>
+      <span>Products</span>
+      <span>Pages</span>
+      <span>Contact</span>
+    </div>
+    <!-- Contact Us -->
+    <div class="contact-us">
+      <img src="../assets/contact.png" style="width: 40px; height: 40px" />
+      <div class="contact-text">
+        <span>Contact Us 24/7</span>
+        <span> +12012987481</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- NOT WORKING PROPERLY FOR SOME REASON ONLY ANGULAR KNOWS -->
+<mat-menu #categoriesMenu>
+  <button mat-menu-item>Category 1</button>
+  <mat-divider></mat-divider>
+  <button mat-menu-item>Category 2</button>
+  <mat-divider></mat-divider>
+  <button mat-menu-item>Category 3</button>
+  <mat-divider></mat-divider>
+  <button mat-menu-item>Category 4</button>
+  <mat-divider></mat-divider>
+  <button mat-menu-item>Category 5</button>
+</mat-menu>
